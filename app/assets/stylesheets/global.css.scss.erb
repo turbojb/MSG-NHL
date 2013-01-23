@@ -1,0 +1,501 @@
+@font-face {
+  font-family: 'TradeGothicLTStdBdCnNo.20';
+  src: url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.eot' %>);
+  src: url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.eot?#iefix' %>) format('embedded-opentype'),
+  url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.woff' %>) format('woff'),
+  url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.ttf' %>) format('truetype'),
+  url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.svg#TradeGothicLTStdBdCnNo.20' %>) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'TradeGothicLTStdBdCnNo.20' !important;
+  margin: 0px;
+  padding: 0px;
+  width: 810px;
+  height: 1700px;
+  overflow:hidden;
+  background-image:url(<%= asset_path 'enter-bg.jpg' %>);
+  background-repeat:no-repeat;
+  overflow-y: scroll;  
+}
+
+#covered-body {
+   font-family: 'TradeGothicLTStdBdCnNo.20' !important;
+  margin: 0px;
+  padding: 0px;
+  width: 810px;
+  height: 1700px;
+  overflow:hidden;
+  background-image:url(<%= asset_path 'covered-form-page.jpg' %>);
+  background-repeat:no-repeat;
+  overflow-y: scroll;  
+}
+
+
+/* h1, h2, h3, h4, h5 {
+  font-family: 'TradeGothicLTStdBdCnNo.20';
+  color:#FFF;
+  font-weight:normal;
+  } */ 
+
+  h1 {
+    font-size: 81px;
+    text-align:center; 
+    margin-top: 150px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 45px; 
+    text-align:center; 
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 24px; 
+    width: 360px;
+    text-align:center;
+  }
+
+  p {
+    font-size: 11px;
+    color: #FFF;
+    margin: 0 0 8px 0;
+    line-height: 15px;
+  }
+
+  .clear {
+    width: 1px;
+    height: 1px;
+    clear: both;
+  }
+
+
+  #wrapper {
+
+    width: 810px;
+    height: 1640px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    overflow: hidden;
+
+
+    table.team_labels {     
+      margin-top: 700px;
+
+    }
+
+    td.team_labels {
+      padding-left: 20px;
+    }
+
+
+    td.team_buttons {
+      padding-left: 78px;
+
+    }
+
+    a.rang_button {
+      background-image: url('rangers-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+      border: none;
+
+    }
+
+    a.rang_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.rang_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    a.dev_button {
+      background-image: url('devils-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+
+    }
+
+    a.dev_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.dev_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    a.isl_button {
+      background-image: url('islanders-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+
+    }
+
+    a.isl_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.isl_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    a.sbr_button {
+      background-image: url('sabres-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+
+    }
+
+    a.sbr_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.sbr_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    table.team_lower_labels {     
+      margin-top: 785px;
+
+    }
+
+    td.team_lower_labels {
+      padding-left: 20px;
+    }
+
+
+    td.team_lower_labels {
+      padding-left: 78px;
+
+    }
+
+    a.rang_button {
+      background-image: url('rangers-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+      border: none;
+
+    }
+
+    a.rang_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.rang_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    a.dev_button {
+      background-image: url('devils-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+
+    }
+
+    a.dev_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.dev_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    a.isl_button {
+      background-image: url('islanders-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+
+    }
+
+    a.isl_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.isl_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+    a.sbr_button {
+      background-image: url('sabres-but.png');
+      width: 86px;
+      height: 29px;
+      display: block;
+      text-indent: -9999px;
+
+    }
+
+    a.sbr_button:active, a.active { 
+      background-position: 0 -99px; 
+
+    }
+
+    a.sbr_button1:active { 
+      background-position: 0 -90px; 
+
+    }
+
+  }
+
+  #form-wrapper {
+    font-family: 'TradeGothicLTStdBdCnNo.20' !important;
+    margin-top: 156px;
+    margin-left: 220px; 
+    padding: 0px;
+    width: 368px;
+    height: 471px; 
+    overflow:hidden;
+    background-image:url(<%= asset_path 'form-bg.png' %>);
+    background-repeat:no-repeat;
+    float:left; 
+
+    .form-header {
+      font-size: 26px;
+      color: #FFFFFF;
+      margin: 10px 0 0 10px;
+    }
+
+    b.large_word {
+      font-size: 12px;
+      color: #FFFFFF;
+    }
+
+    p.header_copy {
+      font-family: "arial";
+      font-size: 12px;
+      color: #FFFFFF;
+      margin: 10px 0 0 10px;
+      width: 325px;
+      line-height: 15px;
+    }
+
+    #our_entry_form {
+      font-family: 'TradeGothicLTStdBdCnNo.20' !important;
+      font-weight: 10px;
+      margin: 10px 0 0 15px ;
+      color: #FFFFFF;
+
+
+      .field {
+        font-family: "arial";
+        margin: 4px 0 0px 0;
+        height: 30px;
+      }
+
+      .dropdown {
+        margin: 0 0 0 0;
+      }
+
+      label {
+        float: left;
+        width: 120px;
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 22px;
+      }
+
+      label.small-label{
+
+        float: left;
+        width: 120px;
+        font-size: 11px;
+        color: white;
+        line-height: 22px;
+      }
+
+      input {
+        width: 200px;
+        line-height: 12px;
+        height: 12px;
+        background-color:#FFF;
+        padding: 4px;
+        border: none;
+        float: left;
+        font-size: 12px;
+        color:#000;
+
+        -moz-box-shadow:    inset 2px 2px 6px #666;
+        -webkit-box-shadow: inset 2px 2px 6px #666;
+        box-shadow:         inset 2px 2px 6px #666;
+      }
+
+      .zip_code {
+        width: 200px;
+      }
+
+
+      .checkboxes {
+        color: #FFF;
+        margin: 0 0 0 -5px;
+        width: 300px;
+
+
+        input[type=checkbox] {
+          float: left;
+          background-color:transparent;
+          width:14px;
+          height: 14px;
+        }
+
+        .chx {
+          width:20px;
+          height: 20px;
+          float: left;
+        }
+
+        label  {
+          font-size: 10px;
+          float: left;
+          width: 241px;
+          margin: 2px 0 8px 6px;
+          line-height: 14px;
+
+          a {
+            color: #000;
+            border-bottom: 1px #bebebe solid;
+            &:hover {
+              border-bottom: 1px #333 solid;                
+            }
+          }
+        }
+
+        .checkbox {
+          margin: 0 0 0 0;
+          clear: both;
+          height: 18px;
+        }
+
+      }
+
+      .actions  {
+        float: left;
+        width: 325px;
+        margin: 0 0 0 0;
+
+        .submit_btn {
+          display:block;
+          width: 105px;
+          height: 37px;
+          text-indent: -3000px;
+          border: none;
+          background: url(<%= asset_path 'enter-but.png' %>) no-repeat 0px 0px;
+          cursor: pointer;
+          margin: 0 0 0 0;
+          float: right;
+          -moz-box-shadow:    none;
+          -webkit-box-shadow: none;
+          box-shadow:         none;
+          
+
+          &:hover {
+            background-position: 0px -0px;
+          }
+          &:active {
+            background-position: 0px -39px;
+          }            
+
+        }
+
+      }
+
+      .required_denote {
+        font-size: 11px;
+        color: #e9b628;
+        font-style: italic;
+        margin: 16px 0 0 0;
+        float: left;
+      }
+
+    }
+  }
+
+
+  #cover-form-wrapper {
+    font-family: 'arial' !important;
+    font-weight: 10px;
+    margin-top: 250px;
+    margin-left: 220px; 
+    padding: 0px;
+    width: 500px;
+    height: 515px; 
+    overflow:hidden;
+    background-image:url(<%= asset_path 'cover-form.png' %>);
+    background-repeat:no-repeat;
+    float:left; 
+    position:absolute; 
+
+  }
+
+  #form-foot-wrapper {
+    font-family: 'arial' !important;
+    padding: 0px;
+    width: 335px;
+    
+
+     
+  }
+
+
+
+  #thanks_screen {
+    font-family: 'TradeGothicLTStdBdCnNo.20' !important;
+    color: #FFFFFF;
+    margin: 0px;
+    margin-top: 148px;
+    margin-left: 220px; 
+    padding: 0px;
+    width: 360px;
+    height: 515px; 
+    overflow:hidden;
+    background-image:url(<%= asset_path 'thankyou-bg.png' %>);
+    background-repeat:no-repeat;
+    float:left; 
+    display:none; 
+  }
+
+
+
+  label {
+    font-family: "arial";
+    color: #FFFFFF;
+    display: block;
+    width: 150px;
+    float: left;
+  }
+
+  select {
+    width: 210px;
+
+  }

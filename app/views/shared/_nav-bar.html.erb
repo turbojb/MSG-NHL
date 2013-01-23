@@ -1,0 +1,26 @@
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">MSG-NHL Tab </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="divider-vertical"></li>
+              <li <% if params[:controller] == "" %>class="active"<% end %>><a href="/"><i class="icon-arrow-left icon-white"></i> Back to site</a></li>
+              <li class="divider-vertical"></li>
+              <li <% if params[:controller] == "entries" %>class="active"<% end %>><a href="/entries">Entries</a></li>
+              <li class="divider-vertical"></li>
+              <li <% if params[:controller] == "admins" %>class="active"<% end %>><a href="/admins">Admins</a></li>
+              <li><%= link_to("Logout", destroy_admin_session_path, :method => :delete) %></li>
+              <li class="divider-vertical"></li>
+               <li style="color:#EEAD0E;"><i class="icon-arrow-left icon-white"></i><br /><i><%= current_admin.email + " signed in" %></i></li>
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>

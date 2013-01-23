@@ -1,0 +1,122 @@
+<div id= "form-wrapper" >
+	<div class ="form-header">
+		<b> A WINNER EVERY WEEK </b>
+		<%= image_tag 'form-underline.png' %> 
+		<p class="header_copy">
+			Every week we're giving you and a friend a changed to see your favorite NHL team skate across home ice. Fill out the form below and you might just be cheering in the stands. Be sure to enter every week.  
+		</p>
+	</div>	
+
+	<%= form_tag('/ajax/enter', :remote => true, :id=>'our_entry_form') do %>
+
+	<div class="field">
+	  	<label for="first_name">First Name*</label>
+	    <%= text_field(:entry, :first_name) %>
+	  </div>
+
+	  <div class="field">
+	  	 <label for="last_name">Last Name*</label>
+	     <%= text_field(:entry, :last_name) %>
+	  </div>
+
+	  <div class="field">
+	  	 <label for="email">Email Address*</label>
+	     <%= text_field(:entry, :email) %>
+	  </div>
+
+	  <div class="field">
+	  	 <label for="zip_code">Zip Code*</label>
+	     <%= text_field(:entry, :zip_code, :class=>"zip_code") %>
+	  </div>
+
+	   <div class="field dropdown">
+	  	 <label for="cable_provider">Cable Provider*</label>
+	     <%= select(:entry, :cable_provider, options_for_select([
+	     	['Select a Provider', 0],
+	     	['Atlantic Broadband', 'Atlantic Broadband'],
+			['AT&T U-Verse', 'AT&T U-Verse'],
+			['Berkshire Cable Corp.', 'Berkshire Cable Corp.'],
+			['Blue Ridge Communications', 'Blue Ridge Communications'],
+			['Cablevision', 'Cablevision'],
+			['Charter Communications', 'Charter Communications'],
+			['Comcast', 'Comcast'],
+			['DirecTV', 'DirecTV'],
+			['DTC Cable', 'DTC Cable'],
+			['Eagle Lake', 'Eagle Lake'],
+			['Javdeck Inc.', 'Javdeck Inc.'],
+			['Empire Video', 'Empire Video'],
+			['Mid-Hudson Cablevision', 'Mid-Hudson Cablevision'],
+			['MTC Cable', 'MTC Cable'],
+			['Princetown Cable', 'Princetown Cable'],
+			['Private Network Cable', 'Private Network Cable'],
+			['RCN', 'RCN'],
+			['Southern Cayuga Cable TV', 'Southern Cayuga Cable TV'],
+			['Service Electric Cable TV', 'Service Electric Cable TV'],
+			['Time Warner Cable', 'Time Warner Cable'],
+			['Universal Satellite', 'Universal Satellite'],
+			['Verizon FiOS', 'Verizon FiOS'],
+			['Zito Media', 'Zito Media'],
+			],
+	     	 1)) %>
+	  </div>
+
+	   <div class="field dropdown">
+	  	 <label for="cable_provider">Favorite NHL team*</label>
+	     <%= select(:entry, :cable_provider, options_for_select([
+	     	['Select a Team', 0],
+	     	['Anaheim Ducks', 'Anaheim Ducks'],
+	     	['Boston Bruins', 'Boston Bruins'],
+			['Buffalo Sabres', 'Buffalo Sabres'],
+			['Calgary Flames', 'Calgary Flames'],
+			['Carolina Hurricanes', 'Carolina Hurricanes'],
+			['Chicago Blackhawks', 'Chicago Blackhawks'],
+			['Colorado Avalanche', 'Colorado Avalanche'],			
+			['Columbus Blue Jackets', 'Columbus Blue Jackets'],
+			['Dallas Stars', 'Dallas Starts'],
+			['Detroit Red Wings', 'Detroit Red Wings'],
+			['Edmonton Oilers', 'Edmonton Oilers'],
+			['Florida Panthers', 'Florida Panthers'],
+			['Los Angeles Kings', 'Los Angeles Kings'],
+			['Montreal Canadiens', 'Montreal Canadiens'],
+			['Nashville Preditors', 'Nashville Preditors'],
+	     	['New Jersey Devils', 'New Jersey Devils'],
+			['New York Islanders', 'New York Islanders'],
+			['New York Rangers', 'New York Rangers'],
+			['Minnisota Wild', 'Minnosota Wild'],
+			['Ottowa Senators', 'Ottowa Senators'],
+			['Philadelphia Flyers', 'Philadelphia Flyers'],
+			['Phoenix Coyotes', 'Phoenix Coyotes'],
+			['Pittsburgh Penguins', 'Pittsburgh Penguins'],
+			['San Jose Sharks', 'San Jose Sharks'],
+			['St. Louis Blues', 'St. Louis Blues'],
+			['Tampa Bay Lightning', 'Tampa Bay Lightning'],	
+			['Toronto Maple Leafs', 'Toronto Maple Leafs'],
+			['Vancouver Canucks', 'Vancouver Canucks'],
+			['Washington Capitals', 'Washington Capitals'],
+			['Winnipeg Jets', 'Winnipeg Jets'],			
+			],
+	     	 1)) %>
+	  </div>
+
+	  <div class="checkboxes">
+
+	    <div class="checkbox">
+	      <div class="chx"><%= check_box(:entry, :official_rules) %></div>
+	      <label>I have read and agree to the <%= link_to("Official Rules", 'https://s3.amazonaws.com/msg_fnk/MSG_FNK_Official_Rules.pdf', :target=>"_blank") %>, <%= link_to("Privacy Policy", 'http://www.msg.com/privacy.html', :target=>"_blank") %> and <%= link_to("Terms of Service", 'http://www.msg.com/terms.html', :target=>"_blank") %>.*</label>
+	    </div>
+	    <div class="checkbox">
+	      <div class="chx"><%= check_box(:entry, :newsletter, :checked=>true) %></div>
+	      <label>I would like to sign up for emails from MSG Networks Insider.</label>
+	    </div>	    
+	  </div>
+	    <div class="actions">
+	    <%= submit_tag "Submit", :class=>"submit_btn"  %>
+	  </div>
+	  <div class="clear"></div>
+	  <div class="required_denote">*required field</div>
+
+	  <% end %>
+	
+
+	
+	</div>

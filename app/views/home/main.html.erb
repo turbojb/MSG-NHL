@@ -1,0 +1,12 @@
+
+
+<% if @signed_request %>
+	<% if(@signed_request["page"]["liked"] == true) then %>
+	<%= render ('entry-form') %>
+	<% else %>
+	<%= render ('covered-form-page') %>
+	<% end %>
+<% end %>
+
+
+

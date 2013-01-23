@@ -1,0 +1,127 @@
+
+	<%= render 'shared/fb_script' %>
+	<div id="wrapper">
+      <div id= "form-wrapper" >
+	<div class ="form-header">
+		A WINNER <font style="font-size:35px;">EVERY</font> WEEK 
+		<%= image_tag 'form-underline.png' %> 
+		<p class="header_copy">
+			Every week we're giving you and a friend a chance to see your favorite NHL team skate across home ice. Fill out the form below and you might just be cheering in the stands. Be sure to enter every week.  
+		</p>
+	</div>	
+
+	<%= form_tag('/ajax/enter', :remote => true, :id=>'our_entry_form') do %>
+
+	<div class="field">
+	  	<label for="first_name" style="font-size:11px;">First Name*</label>
+	    <%= text_field(:entry, :first_name) %>
+	  </div>
+
+	  <div class="field">
+	  	 <label for="last_name" style="font-size:11px;">Last Name*</label>
+	     <%= text_field(:entry, :last_name) %>
+	  </div>
+
+	  <div class="field">
+	  	 <label for="email" style="font-size:11px;">Email Address*</label>
+	     <%= text_field(:entry, :email) %>
+	  </div>
+
+	  <div class="field">
+	  	 <label for="zip_code" style="font-size:11px;">Zip Code*</label>
+	     <%= text_field(:entry, :zip_code, :class=>"zip_code") %>
+	  </div>
+
+	   <div class="field dropdown">
+	  	 <label for="cable_provider" style="font-size:11px;">Cable Provider*</label>
+	     <%= select(:entry, :cable_provider, options_for_select([
+	     	['Select a Provider', 0],
+	     	['Atlantic Broadband', 'Atlantic Broadband'],
+			['AT&T U-Verse', 'AT&T U-Verse'],
+			['Berkshire Cable Corp.', 'Berkshire Cable Corp.'],
+			['Blue Ridge Communications', 'Blue Ridge Communications'],
+			['Cablevision', 'Cablevision'],
+			['Charter Communications', 'Charter Communications'],
+			['Comcast', 'Comcast'],
+			['DirecTV', 'DirecTV'],
+			['DTC Cable', 'DTC Cable'],
+			['Eagle Lake', 'Eagle Lake'],
+			['Javdeck Inc.', 'Javdeck Inc.'],
+			['Empire Video', 'Empire Video'],
+			['Mid-Hudson Cablevision', 'Mid-Hudson Cablevision'],
+			['MTC Cable', 'MTC Cable'],
+			['Princetown Cable', 'Princetown Cable'],
+			['Private Network Cable', 'Private Network Cable'],
+			['RCN', 'RCN'],
+			['Southern Cayuga Cable TV', 'Southern Cayuga Cable TV'],
+			['Service Electric Cable TV', 'Service Electric Cable TV'],
+			['Time Warner Cable', 'Time Warner Cable'],
+			['Universal Satellite', 'Universal Satellite'],
+			['Verizon FiOS', 'Verizon FiOS'],
+			['Zito Media', 'Zito Media'],
+			['Other', 'Other'],
+			],
+	     	 1), {}, {:class => 'select_box'}) %>
+	  </div>
+
+	   <div class="field dropdown">
+	  	 <label for="favorite_nhl" style="font-size:11px;">Favorite NHL Team*</label>
+	     <%= select(:entry, :favorite_nhl, options_for_select([
+	     	['Select a Team', 0],
+			['New York Rangers', 'New York Rangers'],
+			['New Jersey Devils', 'New Jersey Devils'],
+
+			['New York Islanders', 'New York Islanders'],
+			['Buffalo Sabres', 'Buffalo Sabres'],
+				
+			],
+	     	 1), {}, {:class => 'select_box'}) %>
+	  </div>
+
+	  <div class="checkboxes">
+
+	    <div class="checkbox">
+	      <div class="chx"><%= check_box(:entry, :official_rules) %>
+	      </div>
+	      <label style="font-family: arial;">I have read and agree to the <a href="https://s3.amazonaws.com/msg_fnk/MSG_FNK_Official_Rules.pdf" target="_blank"><font color="FFFFFF"> Official Rules, </font></a> 
+	      <a href="http://bit.ly/WrCHM6" target="_blank"><font color="FFFFFF"> Privacy Policy</font></a>, and 
+	      <a href="http://bit.ly/WrCR69" target="_blank"><font color="FFFFFF"> Terms of Service</font></a>.*
+	      </label>
+	    </div>
+	    <div class="checkbox">
+	      <div class="chx"><%= check_box(:entry, :newsletter, :checked=>true) %></div>
+	      <label>I would like to sign up for emails from MSG Networks Insider.</label>
+	    </div>	    
+	  </div>
+	  	<div id="form-foot-wrapper">
+	 	
+	    <div class="actions">
+	    	  <div class="required_denote">*required field</div>
+
+	    <%= submit_tag "Submit", :class=>"submit_btn"  %>
+	  </div>
+	  
+	</div>
+	  <div id="error_holder"></div>
+
+	  <% end %>
+	</div>
+	<table class = "team_labels">
+			<tr>
+				<td class="team_labels"><%= image_tag 'rangerslogo.png' %></td>
+				<td class="team_labels"><%= image_tag 'devilslogo.png' %></td>
+				<td class="team_labels"><%= image_tag 'islanderslogo.png' %></td>
+				<td class="team_labels"><%= image_tag 'saberslogo.png' %></td>
+				<tr>
+				<td class="team_buttons"><a class="rang_button" href="http://www.msg.com/teams/rangers.html" target="_blank"></a></td>
+				<td class="team_buttons"><a class="dev_button" href="http://www.msg.com/teams/devils.html" target="_blank"></a></td>
+				<td class="team_buttons"><a class="isl_button" href="http://www.msg.com/teams/islanders.html" target="_blank"></a></td>
+				<td class="team_buttons"><a class="sbr_button" href="http://www.msg.com/teams/sabres.html" target="_blank"></a></td>
+			</tr>
+			</tr>
+		</table>
+	</div>
+	<div class="form-wrapper">
+		
+	</div>
+	

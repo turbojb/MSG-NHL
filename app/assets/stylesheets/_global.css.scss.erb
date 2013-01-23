@@ -1,0 +1,999 @@
+@font-face {
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+    src: url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.eot' %>);
+    src: url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.eot?#iefix' %>) format('embedded-opentype'),
+         url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.woff' %>) format('woff'),
+         url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.ttf' %>) format('truetype'),
+         url(<%= asset_path 'fonts/tradegothicltstd-bdcn20-webfont.svg#TradeGothicLTStdBdCnNo.20' %>) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: helvetica, verdana, arial, sans-serif !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+    color:#FFF;
+    font-weight:normal;
+}
+
+h1 {
+    font-size: 36px;
+
+}
+
+
+p {
+    font-size: 11px;
+    color: #FFF;
+    margin: 0 0 8px 0;
+    line-height: 15px;
+  }
+
+  .clear {
+    width: 1px;
+    height: 1px;
+    clear: both;
+  }
+
+#wrapper {
+  width: 810px;
+  height: 1072px;
+  position: relative;
+  background: #000000 url(<%= asset_path 'main_bg.jpg' %>) repeat-y;
+  overflow: hidden;
+
+}
+
+.msg_logo {
+  position: absolute;
+  bottom:12px;
+  right:12px;
+}
+
+  #header {
+    width: 810px;
+    text-align: center;
+    
+    .main_header {
+      margin:  40px 0 0 0;
+
+    }
+
+    .tune_in {
+      margin: 48px 0 0 0;
+    }
+
+    .showtimes_btn {
+      display: block;
+      width: 442px;
+      height: 61px;
+      background: url(<%= asset_path 'showtimes_btn.png' %>) no-repeat;
+      text-indent: -4000px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      margin-top: 40px;
+
+      &:hover {
+        background-position: 0 -56px;
+      }
+    }
+
+  }
+
+  .share {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    .fb_share {
+      display: block;
+      width: 30px;
+      height: 32px;
+      background: url(<%= asset_path 'social_icons.png' %>) no-repeat;
+      text-indent: -4000px;
+      float: left;
+      &:hover {
+        background-position: 0 -39px;
+      }
+    }
+
+    .twitter_share {
+      display: block;
+      width: 30px;
+      height: 32px;
+      background: url(<%= asset_path 'social_icons.png' %>) -37px 0px no-repeat;
+      text-indent: -4000px;
+      float: left;
+      margin: 0 8px 0 8px;
+      &:hover {
+        background-position: -37px -39px;
+      }
+    }
+
+    .email_share {
+      display: block;
+      width: 30px;
+      height: 32px;
+      background: url(<%= asset_path 'social_icons.png' %>) -74px 0px no-repeat;
+      text-indent: -4000px;
+      float: left;
+      &:hover {
+        background-position: -74px -39px;
+      }
+    }
+
+
+  }
+
+#like_us_strip {
+  width: 810px;
+  height: 60px;
+  background: url(<%= asset_path 'like_us_strip.png' %>) no-repeat 0px 0px;
+  margin: 0 0 -30px 0;
+}
+   
+#football {
+  position: absolute;
+  top: 302px;
+  left: 20px;
+  width: 198px;
+  height: 218px;
+  background: url(<%= asset_path 'football.png' %>) no-repeat 0px 0px;
+  z-index: 300;
+
+}
+
+#entry_form_wrapper {
+  width: 645px;
+  height: 549px;
+  padding: 40px 0 0 0;
+  position: absolute;
+  left:95px;
+  top: 392px;
+  background: url(<%= asset_path 'form_wrapper_bg.png' %>) no-repeat;
+
+  /*display: none;*/
+
+}
+
+
+#how_it_works_wrapper {
+
+  position: absolute;
+  right: 74px;
+  bottom: 185px;
+
+  a.how_it_works_btn {
+      display:block;
+      width: 172px;
+      height: 48px;
+      text-indent: -3000px;
+      border: none;
+      background: url(<%= asset_path 'how_it_works_btn.png' %>) no-repeat 0px 0px;
+      cursor: pointer;
+      -webkit-box-shadow:none;
+
+      &:hover {
+        background-position: 0px -44px;
+
+      }
+
+  }
+
+}
+
+#blurred_form {
+  width:810px;
+  height: 614px;
+  background: url(<%= asset_path 'blurred_form.png' %>) no-repeat 0px 0px;
+}
+
+
+#our_entry_form {
+    
+    width: 470px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 27px;
+      color: #FFF;
+      line-height: 28px;
+      margin: 0 0 20px 0;
+    }
+
+    
+
+    .field {
+      margin: 0 0 12px 0;
+      height: 28px;
+    }
+
+    label {
+      float: left;
+      width: 120px;
+      font-size: 14px;
+      color: #FFF;
+
+    }
+
+     input {
+        width: 300px;
+        height: 22px;
+        background-color:#FFF;
+        padding: 4px;
+        border: none;
+        float: left;
+        font-size: 14px;
+        color:#000;
+
+        -moz-box-shadow:    inset 2px 2px 6px #666;
+        -webkit-box-shadow: inset 2px 2px 6px #666;
+        box-shadow:         inset 2px 2px 6px #666;
+    }
+
+    .zip_code {
+      width: 100px;
+    }
+
+
+    .checkboxes {
+        color: #FFF;
+        margin: 0 0 0 0;
+        width: 300px;
+        float: left;
+
+        input[type=checkbox] {
+          float: left;
+          background-color:transparent;
+          width:14px;
+          height: 14px;
+        }
+
+        .chx {
+          width:20px;
+          height: 20px;
+          float: left;
+        }
+
+        label  {
+          font-size: 10px;
+          float:left;
+          width: 264px;
+          margin: 8px 0 0 6px;
+          
+          a {
+            color: #FFF;
+
+          }
+        }
+
+        .checkbox {
+          margin: 0 0 8px 0;
+          clear: both;
+          height: 20px;
+        }
+
+    }
+
+    .actions  {
+        float: left;
+        width: 130px;
+
+        .submit_btn {
+          display:block;
+          width: 130px;
+          height: 48px;
+          top: 4px;
+          text-indent: -3000px;
+          border: none;
+          background: url(<%= asset_path 'submit_btn.png' %>) no-repeat 0px 0px;
+          cursor: pointer;
+          margin:0px 0 0 0;
+
+          -webkit-box-shadow:none;
+
+          &:hover {
+            background-position: 0px -48px;
+
+          }
+
+      }
+
+    }
+
+    .required_denote {
+      font-size: 11px;
+      color: #949494;
+      font-style: italic;
+      margin: 20px 0 0 0;
+      clear:both;
+    }
+
+}
+
+.white {
+  color: #FFF;
+
+}
+
+#schedule {
+
+
+}
+
+#how_it_works {
+ /* display: none;*/
+  width: 469px;
+  height: 275px;
+  background: url(<%= asset_path 'how_it_works_bg.png' %>) no-repeat 0px 0px;
+  padding:50px;
+
+  p {
+    font-size: 27px;
+    line-height: 32px;
+    text-align: center;
+    padding:0px;
+    margin:0 0 30px 0;
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+  }
+
+  .enter_to_win_btn {
+    display:block;
+    width: 157px;
+    height: 43px;
+    text-indent: -3000px;
+    border: none;
+    background: url(<%= asset_path 'enter_to_win_btn.png' %>) no-repeat 0px 0px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    -webkit-box-shadow:none;
+
+    &:hover {
+      background-position: 0px -43px;
+
+    }
+  }
+
+}
+
+
+
+#thanks_screen {
+  width: 455px;
+  margin: 0 auto;
+  display: none;
+
+  h1 {
+    font-size: 45px;
+    color: #FFF;
+    margin: 175px 0 0 0;
+  }
+
+  .return_to_fb {
+    display:block;
+    width: 297px;
+    height: 48px;
+    text-indent: -3000px;
+    border: none;
+    background: url(<%= asset_path 'facebook_btn.png' %>) no-repeat 0px 0px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    -webkit-box-shadow:none;
+
+    &:hover {
+      background-position: 0px -49px;
+
+    }
+  }
+}
+
+
+sup,
+sub {
+  font-size: 60%;
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  _vertical-align: bottom;
+  position: relative;
+  
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+
+
+
+#footer {
+  width: 810px;
+  height: 175px;
+  background-color:#FFF;
+  position: relative;
+
+  p {
+    margin: 10px 0 0 0;
+    padding: 0px;
+
+  }
+  
+  a {
+    color: #000;
+  }
+
+  .disclaimer  {
+    padding: 10px;
+    
+    p {
+      font-size: 11px;
+      color: #000;
+      margin: 0 0 0px 0;
+      font-family: helvetica, arial, sans-serif;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+/****************************************************************** Form Error Styles ************************************************************************/
+
+#error_holder {
+    display: none;
+}
+
+/* Z-INDEX */
+ .formError { z-index: 1990; font-family: helvetica, arial, verdana, sans-serif; }
+    .formError .formErrorContent { z-index: 1991; }
+    .formError .formErrorArrow { z-index: 1996; }
+    
+    .formErrorInsideDialog.formError { z-index: 5000; }
+    .formErrorInsideDialog.formError .formErrorContent { z-index: 5001; }
+    .formErrorInsideDialog.formError .formErrorArrow { z-index: 5006; }
+
+
+
+
+.inputContainer {
+    position: relative;
+    float: left;
+}
+
+.formError {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    cursor: pointer;
+}
+
+.ajaxSubmit {
+    padding: 20px;
+    background: #55ea55;
+    border: 1px solid #999;
+    display: none
+}
+
+.formError .formErrorContent {
+    width: 100%;
+    background: #FF1100;
+    position:relative;
+    color: #fff;
+    width: 200px;
+    font-size: 11px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 6px #000;
+    -moz-box-shadow: 0 0 6px #000;
+    -webkit-box-shadow: 0 0 6px #000;
+    padding: 4px 10px 4px 10px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.greenPopup .formErrorContent {
+    background: #FF1100;
+}
+
+.blackPopup .formErrorContent {
+    background: #FF1100;
+    color: #FFF;
+}
+
+.formError .formErrorArrow {
+    width: 15px;
+    margin: -2px 0 0 13px;
+    position:relative;
+}
+body[dir='rtl'] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+    margin: -2px 13px 0 0;
+}
+
+.formError .formErrorArrowBottom {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0px 0 0 12px;
+    top:2px;
+}
+
+.formError .formErrorArrow div {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    box-shadow: 0 2px 3px #444;
+    -moz-box-shadow: 0 2px 3px #444;
+    -webkit-box-shadow: 0 2px 3px #444;
+    font-size: 0px;
+    height: 1px;
+    background: #ee0101;
+    margin: 0 auto;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+}
+
+.formError .formErrorArrowBottom div {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.greenPopup .formErrorArrow div {
+    background: #33be40;
+}
+
+.blackPopup .formErrorArrow div {
+    background: #393939;
+    color: #FFF;
+}
+
+.formError .formErrorArrow .line10 {
+    width: 15px;
+    border: none;
+}
+
+.formError .formErrorArrow .line9 {
+    width: 13px;
+    border: none;
+}
+
+.formError .formErrorArrow .line8 {
+    width: 11px;
+}
+
+.formError .formErrorArrow .line7 {
+    width: 9px;
+}
+
+.formError .formErrorArrow .line6 {
+    width: 7px;
+}
+
+.formError .formErrorArrow .line5 {
+    width: 5px;
+}
+
+.formError .formErrorArrow .line4 {
+    width: 3px;
+}
+
+.formError .formErrorArrow .line3 {
+    width: 1px;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    border-bottom: 0 solid #ddd;
+}
+
+.formError .formErrorArrow .line2 {
+    width: 3px;
+    border: none;
+    background: #ddd;
+}
+
+.formError .formErrorArrow .line1 {
+    width: 1px;
+    border: none;
+    background: #ddd;
+}
+
+
+
+
+/**************************************************************************************************************************************************************************************/
+
+
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+ * 
+ * Version: 1.3.4 (11/11/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+
+/* Loading Gif Added to background of video player  */
+/* See #fancybox-content for changes */
+/* See #fancybox-content for changes */
+
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1104;
+  display: none;
+}
+
+#fancybox-loading div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 480px;
+  background-image: url('fancybox/fancybox.png');
+}
+
+#fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  display: none;
+}
+
+#fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: auto;
+  display: none;
+}
+
+#fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0px;
+  z-index: 1101;
+  outline: none;
+  display: none;
+}
+
+#fancybox-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 16px;
+/*  background: #000;
+*/}
+
+
+/* Loading Gif Added to background of video player  */
+/* Loading Gif Added to background of video player  */
+/* Loading Gif Added to background of video player  */
+#fancybox-content {
+  width: 0;
+  height: 0;
+  padding: 0;
+  outline: none;
+  position: relative;
+/*  overflow: hidden;
+*/  z-index: 1102;
+/*  border: 0px solid #fff; */
+  background-image: url('fancybox/sdk_modal.png'); 
+/*  background-position-x: 50%;
+  background-position-y: 50%;
+*/  background-repeat: no-repeat;
+}
+
+#fancybox-hide-sel-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1101;
+}
+
+#fancybox-close {
+  position: absolute;
+    top: -13px;
+    right: 11px;
+    width: 30px;
+  height: 30px;
+  background: transparent url('fancybox/fancybox.png') -40px 0px;
+  cursor: pointer;
+  z-index: 1103;
+  display: none;
+}
+
+#fancybox-error {
+  color: #444;
+  font: normal 12px/20px Arial;
+  padding: 14px;
+  margin: 0;
+}
+
+#fancybox-img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  line-height: 0;
+  vertical-align: top;
+}
+
+#fancybox-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+#fancybox-left, #fancybox-right {
+  position: absolute;
+  bottom: 0px;
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  outline: none;
+  background: transparent url('fancybox/blank.gif');
+  z-index: 1102;
+  display: none;
+}
+
+#fancybox-left {
+  left: 0px;
+}
+
+#fancybox-right {
+  right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  cursor: pointer;
+  z-index: 1102;
+  display: block;
+}
+
+#fancybox-left-ico {
+  background-image: url('fancybox/fancybox.png');
+  background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+  background-image: url('fancybox/fancybox.png');
+  background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+  visibility: visible; /* IE6 */
+}
+
+#fancybox-left:hover span {
+  left: 20px;
+}
+
+#fancybox-right:hover span {
+  left: auto;
+  right: 20px;
+}
+
+.fancybox-bg {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 1001;
+}
+
+#fancybox-bg-n {
+  top: -20px;
+  left: 0;
+  width: 100%;
+/*  background-image: url('fancybox/fancybox-x.png');
+*/}
+
+#fancybox-bg-ne {
+  top: -20px;
+  right: -20px;
+/*  background-image: url('fancybox/fancybox.png');
+*/  background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+  top: 0;
+  right: -20px;
+  height: 100%;
+/*  background-image: url('fancybox/fancybox-y.png');
+*/  background-position: -20px 0px;
+}
+
+#fancybox-bg-se {
+  bottom: -20px;
+  right: -20px;
+/*  background-image: url('fancybox/fancybox.png');
+*/  background-position: -40px -182px; 
+}
+
+#fancybox-bg-s {
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+/*  background-image: url('fancybox/fancybox-x.png');
+*/  background-position: 0px -20px;
+}
+
+#fancybox-bg-sw {
+  bottom: -20px;
+  left: -20px;
+/*  background-image: url('fancybox/fancybox.png');
+*/  background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+  top: 0;
+  left: -20px;
+  height: 100%;
+/*  background-image: url('fancybox/fancybox-y.png');
+*/}
+
+#fancybox-bg-nw {
+  top: -20px;
+  left: -20px;
+/*  background-image: url('fancybox/fancybox.png');
+*/  background-position: -40px -122px;
+}
+
+#fancybox-title {
+  font-family: Helvetica;
+  font-size: 12px;
+  z-index: 1102;
+}
+
+.fancybox-title-inside {
+  padding-bottom: 10px;
+  text-align: center;
+  color: #333;
+  background: #fff;
+  position: relative;
+}
+
+.fancybox-title-outside {
+  padding-top: 10px;
+  color: #fff;
+}
+
+.fancybox-title-over {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FFF;
+  text-align: left;
+}
+
+#fancybox-title-over {
+  padding: 10px;
+  background-image: url('fancybox/fancy_title_over.png');
+  display: block;
+}
+
+.fancybox-title-float {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  height: 32px;
+}
+
+#fancybox-title-float-wrap {
+  border: none;
+  border-collapse: collapse;
+  width: auto;
+}
+
+#fancybox-title-float-wrap td {
+  border: none;
+  white-space: nowrap;
+}
+
+#fancybox-title-float-left {
+  padding: 0 0 0 15px;
+  background: url('fancybox/fancybox.png') -40px -90px no-repeat;
+}
+
+#fancybox-title-float-main {
+  color: #FFF;
+  line-height: 29px;
+  font-weight: bold;
+  padding: 0 0 3px 0;
+  background: url('fancybox/fancybox-x.png') 0px -40px;
+}
+
+#fancybox-title-float-right {
+  padding: 0 0 0 15px;
+  background: url('fancybox/fancybox.png') -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_close.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='ffancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+  height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+  position: absolute; margin-top: 0;
+  top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#fancybox-loading.fancybox-ie6 div  { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
+
+/*
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+
+.fancybox-ie #fancybox-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
+*/

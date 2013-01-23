@@ -1,0 +1,44 @@
+<% if @entry.errors.any?  %>
+	//Hide the existing form errors
+	//
+	$('#error_holder').fadeOut(100);
+	
+	var errors = [];
+
+
+	<% @entry.errors.each_with_index do |msg, i| %>
+
+		var field = '<%= escape_javascript(msg[0].to_s) %>';
+		var msg = '<%= escape_javascript(msg[1].to_s) %>';
+
+		//override the name mismatch
+		//
+		if(field =='age') {
+			field = 'birthday_2i';
+		}
+
+		var html = generate_error_msg(field, msg);
+
+		errors.push(html);
+
+		//add it to the form container
+		//
+		$('#error_holder').html(errors.join(''));
+
+		//show the errors
+		//
+		$('#error_holder').fadeIn(300, function(){});
+
+	<% end %>
+
+	$('.formError').mouseover(function() {$(this).fadeOut();});
+
+<% else %>
+
+	$('#error_holder').fadeOut();
+	
+	show_thank_you_screen();
+
+	
+
+<% end %>
